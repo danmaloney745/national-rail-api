@@ -1,4 +1,4 @@
-class Departures {
+class SearchDepartures {
     constructor(obj) {
         if(!obj.numRows){
             throw new Error("You must specify the amount of Rows to display");
@@ -22,4 +22,4 @@ class Departures {
     }
 }
 
-module.exports = Departures;
+module.exports = SearchDepartures;
