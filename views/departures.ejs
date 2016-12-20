@@ -2,56 +2,106 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/search-style.css">
+        <link rel="stylesheet" type="text/css" href="css/table-style.css">
         <title>Railway Network</title>
     </head>
     <body>
+        <form class="form-wrapper cf">
+  	        <input type="text" placeholder="Search here..." required>
+	        <button type="submit">Search</button>
+        </form>
         <h1>Departure Board</h1>
-        <div id="stuff1">
-            
-        </div>
-        <div id="stuff2">
-            
-        </div>
-        <div id="stuff3">
-            
-        </div>
-        <div id="stuff4">
-            
-        </div>
-        <div id="stuff5">
-            
-        </div>
-        <div id="stuff6">
-            
-        </div>
-        <div id="stuff7">
-            
-        </div>
-        <div id="stuff8">
-            
-        </div>
-        <div id="stuff9">
-            
-        </div>
-        <div id="stuff10">
-            
-        </div>
-        <!--<div class="container">
-            <div class="row">
-                <div class="col s2">
-                    <h3>Time</h3>
+        <section id="departureBoard">
+            <div class="container deptBoard">
+                <div class="row">
+                    <table class="bordered">
+                        <thead>
+                            <tr>
+                                <th data-field="locName">Station:</th>
+                                <th data-field="destName">Destination</th>
+                                <th data-field="schDepartTime">Time:</th>
+                                <th data-field="platform">Platform</th>
+                                <th data-field="estDepartTime">Expt</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr id="stuff1">
+                                <td id="loc1"></td>
+                                <td id="dest1"></td>
+                                <td id="sch1"></td>
+                                <td id="plat1"></td>
+                                <td id="est1"></td>
+                            </tr>
+                            <tr id="stuff2">
+                                <td id="loc2"></td>
+                                <td id="dest2"></td>
+                                <td id="sch2"></td>
+                                <td id="plat2"></td>
+                                <td id="est2"></td>
+                            </tr>
+                            <tr id="stuff3">
+                                <td id="loc3"></td>
+                                <td id="dest3"></td>
+                                <td id="sch3"></td>
+                                <td id="plat3"></td>
+                                <td id="est3"></td>
+                            </tr>
+                            <tr id="stuff4">
+                                <td id="loc4"></td>
+                                <td id="dest4"></td>
+                                <td id="sch4"></td>
+                                <td id="plat4"></td>
+                                <td id="est4"></td>
+                            </tr>
+                            <tr id="stuff5">
+                                <td id="loc5"></td>
+                                <td id="dest5"></td>
+                                <td id="sch5"></td>
+                                <td id="plat5"></td>
+                                <td id="est5"></td>
+                            </tr>
+                            <tr id="stuff6">
+                                <td id="loc6"></td>
+                                <td id="dest6"></td>
+                                <td id="sch6"></td>
+                                <td id="plat6"></td>
+                                <td id="est6"></td>
+                            </tr>
+                            <tr id="stuff7">
+                                <td id="loc7"></td>
+                                <td id="dest7"></td>
+                                <td id="sch7"></td>
+                                <td id="plat7"></td>
+                                <td id="est7"></td>
+                            </tr>
+                            <tr id="stuff8">
+                                <td id="loc8"></td>
+                                <td id="dest8"></td>
+                                <td id="sch8"></td>
+                                <td id="plat8"></td>
+                                <td id="est8"></td>
+                            </tr>
+                            <tr id="stuff9">
+                                <td id="loc9"></td>
+                                <td id="dest9"></td>
+                                <td id="sch9"></td>
+                                <td id="plat9"></td>
+                                <td id="est9"></td>
+                            </tr>
+                            <tr id="stuff10">
+                                <td id="loc10"></td>
+                                <td id="dest10"></td>
+                                <td id="sch10"></td>
+                                <td id="plat10"></td>
+                                <td id="est10"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col s4">
-                    <h3>Destination</h3>
-                </div>
-                <div class="col s3">
-                    <h3>Platform</h3>
-                </div>
-                <div class="col s3">
-                    <h3>Expected</h4>
-                </div> 
-            </div>
-        <div>-->
+            <div>
+        </section>
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/departureBoard.js"></script>

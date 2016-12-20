@@ -1,0 +1,11 @@
+/*============== Table Styling ==============*/
+.deptBoard {
+    width: 90%;
+}
+
+.bordered {
+    background: rgba(0,0,0,1);
+    color: orange;
+    font-size: 20px;
+    font-family: "BPdotsSquares";
+}
