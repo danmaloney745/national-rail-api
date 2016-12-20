@@ -10,7 +10,7 @@ class DeparturesController {
         FetchDepartures.getData()
             .then(result => {
                 const trainData = new DataModel(result);
-                //console.log(trainData);
+                console.log(trainData);
                 res.status(200).send({
                     result: trainData
                 });

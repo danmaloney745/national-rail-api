@@ -1,4 +1,5 @@
 $(() => {
+    $(`#button`).on('click', ( () => {
     $.ajax({
         url: '/dept-data',
         method: 'POST',
@@ -12,7 +13,7 @@ $(() => {
                 $(`#plat${i+1}`).append(`${theData.platformNum[i]}  `);
                 $(`#est${i+1}`).append(`${theData.estimatedDeptTime[i]}  `);
                 $(`#sch${i+1}`).append(`${theData.scheduledDeptTime[i]}  `);
-            }
-            
-        });        
+            }          
+        });
+    }));       
 });
