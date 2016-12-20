@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const departuresController = require("../controllers/departureBoardController");
 
-router.get("/departures", departuresController.showIndex);
-router.get("dept-head", departuresController.setSoapHeader);
-router.get("/departures-data", departuresController.getData);
+router.post("/dept-data", departuresController.getDeptData);
+router.get("/showDept", departuresController.showDept);
 
 module.exports = router;

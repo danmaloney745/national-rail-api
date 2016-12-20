@@ -2,29 +2,21 @@
 class DeparturesModel {
 
     constructor(obj){
-        if(!obj.locationName){
-            throw new Error("Location Name not found");
-        } else {
-            this.locationName = obj.GetStationBoard.locationName;
-        }
+        //define arrays for parameters
+        this.scheduledDeptTime = [];
+        this.estimatedDeptTime = [];
+        this.platformNum = [];
+        this.origin = [];
+        this.destination = [];
 
-        if(!obj.schedDepTime){
-            throw new Error("Location Name not found");
-        } else {
-            this.schedDepTime = obj.GetStationBoard.trainServices.service[0].etd;
-        }
-
-        if(!obj.estDepTime){
-            throw new Error("Location Name not found");
-        } else {
-            this.estDepTime = obj.GetStationBoard.trainServices.service[0].eta;
+        for(let i = 0; i < 10; i++){
+            this.scheduledDeptTime[i] = obj.GetStationBoardResult.trainServices.service[i].std;
+            this.estimatedDeptTime[i] = obj.GetStationBoardResult.trainServices.service[i].etd;
+            this.platformNum[i] = obj.GetStationBoardResult.trainServices.service[i].platform;
+            this.origin[i] = obj.GetStationBoardResult.trainServices.service[i].origin.location[0].locationName;
+            this.destination[i] = obj.GetStationBoardResult.trainServices.service[i].destination.location[0].locationName;
         }
     }
-
-    returnDeparturesRequest(){
-        return this;
-    }
-
 }
 
 module.exports = DeparturesModel;

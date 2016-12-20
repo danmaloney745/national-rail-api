@@ -1,20 +1,23 @@
 const FetchDepartures = require("../lib/fetchDepartureBoard");
+const DataModel = require("../models/departuresModel");
 
 class DeparturesController {
-    static showIndex(req,res){
+    static showDept(req,res){
         res.render("departures");
     }
 
-    static getData(req,res){
+    static getDeptData(req,res){
         FetchDepartures.getData()
             .then(result => {
+                const trainData = new DataModel(result);
+                console.log(trainData);
                 res.status(200).send({
-                    numRows: req.body.getData,
-                    crs: req.body.crs
+                    result: trainData
                 });
             })
             .catch(err => {
                 res.status(400).send(err);
+                console.log(err);
             })
     }
 }
