@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = require("./routes/routes");
-const departureRoutes = require("./routes/departures");
+const searchRoutes = require("./routes/search");
 const app = express();
 
 //view options
@@ -14,9 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
+
 //Routes 
 app.use(routes);
-app.use(departureRoutes);
+app.use(searchRoutes);
 
 /*========================== Middleware ====================*/
 

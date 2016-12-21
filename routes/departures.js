@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 const departuresController = require("../controllers/departureBoardController");
 
-router.route("/dept-data")
-    .post(departuresController.getDeptData)
-    .get(departuresController.showDept);
-
+router.route("/departures")
+    .get(departuresController.showDept)
+    .post(departuresController.getDeptData);
 
 module.exports = router;

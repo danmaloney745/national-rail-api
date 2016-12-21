@@ -1,19 +1,28 @@
 $(() => {
-    $(`#button`).on('click', ( () => {
-    $.ajax({
-        url: '/dept-data',
-        method: 'POST',
-        })
-        .then((data) =>  {    
-            let theData = data.result;
-            console.log(theData);
-            for(let i = 0; i < 10; i++) {
-                $(`#loc${i+1}`).append(`${theData.origin[i]}  `);
-                $(`#dest${i+1}`).append(`${theData.destination[i]}  `);
-                $(`#plat${i+1}`).append(`${theData.platformNum[i]}  `);
-                $(`#est${i+1}`).append(`${theData.estimatedDeptTime[i]}  `);
-                $(`#sch${i+1}`).append(`${theData.scheduledDeptTime[i]}  `);
-            }          
+    $(`#submitSearch`).click( (e) => {
+       e.preventDefault();
+        let crsCode = $("#searchQuery").val();
+        console.log(crsCode);
+        $.ajax({
+            dataType: 'json',
+            url: '/search',
+            method: "POST",
+            data: {
+                searchQuery: crsCode
+            },
+            success: displayData
         });
-    }));       
-});
+    });
+
+    let displayData = (data) =>  {  
+        console.log(data);  
+        let theData = data.result;
+        for(let i = 0; i < 10; i++) {
+            $(`#loc${i}`).append(`${theData.origin[i]}  `);
+            $(`#dest${i}`).append(`${theData.destination[i]}  `);
+            $(`#plat${i}`).append(`${theData.platformNum[i]}  `);
+            $(`#est${i}`).append(`${theData.estimatedDeptTime[i]}  `);
+            $(`#sch${i}`).append(`${theData.scheduledDeptTime[i]}  `);
+        }
+    }
+}); 
