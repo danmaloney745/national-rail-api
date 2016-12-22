@@ -1,9 +1,11 @@
 $(() => {
     $(`#submitSearch`).click( (e) => {
        e.preventDefault();
-       
+
+        //Pass in the search query from the user, ensure the text is upper case in order to read from the SOAP API
         let crsCode = $("#searchQuery").val().toUpperCase();
 
+        //Ensure the passed in string meets the requirements of a CRS code (3 chars).
         if(crsCode.length < 3 || crsCode.length > 3) {
             console.log('You must enter three digits');
         }
