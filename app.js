@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const routes = require("./routes/routes");
 const searchRoutes = require("./routes/search");
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.static('public'));
 
 
 //Routes 
+app.use(routes);
 app.use(searchRoutes);
 
 /*========================== Middleware ====================*/
