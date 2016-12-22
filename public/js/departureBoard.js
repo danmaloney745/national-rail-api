@@ -14,15 +14,29 @@ $(() => {
         });
     });
 
+
     let displayData = (data) =>  {  
-        console.log(data);  
         let theData = data.result;
-        for(let i = 0; i < 10; i++) {
-            $(`#loc${i}`).append(`${theData.origin[i]}  `);
-            $(`#dest${i}`).append(`${theData.destination[i]}  `);
-            $(`#plat${i}`).append(`${theData.platformNum[i]}  `);
-            $(`#est${i}`).append(`${theData.estimatedDeptTime[i]}  `);
-            $(`#sch${i}`).append(`${theData.scheduledDeptTime[i]}  `);
+        
+        for(let i in theData.destination) {
+            let theDataObject = theData.destination[i];
+            $(`#dest`).append(`<p>${theDataObject}</p>`);
+        }
+        for(let i in theData.origin) {
+            let theDataObject = theData.origin[i];
+            $(`#loc`).append(`<p>${theDataObject}</p>`);
+        }
+        for(let i in theData.scheduledDeptTime) {
+            let theDataObject = theData.scheduledDeptTime[i];
+            $(`#sch`).append(`<p>${theDataObject}<p>`);
+        }
+        for(let i in theData.estimatedDeptTime) {
+            let theDataObject = theData.estimatedDeptTime[i];
+            $(`#est`).append(`<p>${theDataObject}<p>`);
+        }
+        for(let i in theData.platformNum) {
+            let theDataObject = theData.platformNum[i];
+            $(`#plat`).append(`<p>${theDataObject}<p>`);
         }
     }
 }); 
