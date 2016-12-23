@@ -1,7 +1,7 @@
 $(() => {
     $(`#submitSearch`).click( (e) => {
        e.preventDefault();
-
+       emptyTable();
         //Pass in the search query from the user, ensure the text is upper case in order to read from the SOAP API
         let crsCode = $("#searchQuery").val().toUpperCase();
 
@@ -23,6 +23,16 @@ $(() => {
         }
     });
 
+    //Resets the table data every search
+    let emptyTable = (data) => {
+        $( "#dest" ).empty();
+        $( "#loc" ).empty();
+        $( "#sch" ).empty();
+        $( "#est" ).empty();
+        $( "#plat" ).empty();
+    }
+
+    //If the post request is sucessful populate the HTML with the data. Bloated method that needs condensing.
     let displayData = (data) =>  {  
         let theData = data.result;
 

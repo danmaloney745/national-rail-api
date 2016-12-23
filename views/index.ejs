@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Network Rail API</h1>
-        <form class="form-wrapper cf" id="myForm">
+        <form class="form-wrapper cf">
   	        <input type="text" name="searchQuery" id="searchQuery" placeholder="Search here..." required>
 	        <button id="submitSearch" type="submit">Search</button>
         </form>
@@ -16,31 +16,35 @@
         <section id="departureBoard">
             <div class="container deptBoard">
                 <div class="row">
-                    <table class="bordered myTable">
-                        <tr>
-                            <th data-field="locName">Origin:</th>
-                            <th data-field="destName">Destination</th>
-                            <th data-field="schDepartTime">Time:</th>
-                            <th data-field="platform">Platform</th>
-                            <th data-field="estDepartTime">Expt</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div id="loc"></div> 
-                            </td>
-                            <td> 
-                                <div id="dest"></div>
-                            </td>
-                            <td>
-                                <div id="sch"></div> 
-                            </td>
-                            <td> 
-                                <div id="plat"></div>
-                            </td>
-                            <td>
-                                <div id="est"></div>
-                            </td>  
-                        </tr>       
+                    <table class="bordered" id="myTable">
+                        <thead>
+                            <tr>
+                                <th data-field="locName">Origin:</th>
+                                <th data-field="destName">Destination</th>
+                                <th data-field="schDepartTime">Time:</th>
+                                <th data-field="platform">Platform</th>
+                                <th data-field="estDepartTime">Expt</th>
+                            </tr>
+                        </thead>
+                        <tbody id="deptTable">
+                            <tr>
+                                <td>
+                                    <div id="loc"></div> 
+                                </td>
+                                <td> 
+                                    <div id="dest"></div>
+                                </td>
+                                <td>
+                                    <div id="sch"></div> 
+                                </td>
+                                <td> 
+                                    <div id="plat"></div>
+                                </td>
+                                <td>
+                                    <div id="est"></div>
+                                </td>  
+                            </tr>       
+                        </tbody>
                     </table>
                 </div>
             <div>
