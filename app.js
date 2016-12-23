@@ -1,13 +1,14 @@
+/*========================== Requires ====================*/
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = require("./routes/routes");
 const searchRoutes = require("./routes/search");
 const app = express();
 
+/*========================== Middleware ====================*/
 //view options
 app.set('view engine', 'ejs');
-
-/*========================== Middleware ====================*/
 
 //Body Parser
 app.use(bodyParser.json());
@@ -19,10 +20,7 @@ app.use(express.static('public'));
 app.use(routes);
 app.use(searchRoutes);
 
-/*========================== Middleware ====================*/
-
 /*==========================Port Info ====================*/
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server listening on port 3000 ${process.env.PORT || 3000}`);
 });
-/*========================== Port Info====================*/

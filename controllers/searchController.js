@@ -6,10 +6,10 @@ class SearchController {
 
         FetchDepartures.getData(req.body.searchQuery)
             .then (result => {
-                const trainData = new DataModel(result);
+                const service = new DataModel(result);
 
                 res.status(200).send({
-                    result: trainData
+                    result: service
                 });
             })
             .catch(err => {
