@@ -10,8 +10,16 @@
   "description": "",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "express-session": "^1.14.2",
+    "jsonwebtoken": "^7.2.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.6",
+    "password-hash": "^1.2.2",
     "restler": "^3.4.0",
     "soap": "0.11.4"
   }

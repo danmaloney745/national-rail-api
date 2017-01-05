@@ -1,4 +1,5 @@
 <nav>
+  <div class="nav-wrapper">
   <% if(user) { %>
     <a href="/">Departures</a>
     <form action="/sessions" method="POST">
@@ -10,4 +11,5 @@
     <a href="/sessions/new">Login</a>
     <a href="/register">Register</a>
   <% } %>
+  </div>
 </nav>

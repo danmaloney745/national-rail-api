@@ -1,74 +1,58 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/materialize.css"/>
-        <link rel="stylesheet" href="css/search-style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/table-style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/search-style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <title>Railway Network</title>
-    </head>
-    <body>
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1 class="header center teal-text text-lighten-2">National Rail API</h1>
-                <div class="row center">
-                    <form class="form-wrapper cf">
-  	                    <input type="text" name="searchQuery" id="searchQuery" placeholder="Search here..." required>
-	                        <button id="submitSearch" type="submit">Search</button>
-                    </form>
 
-                </div>
-            </div>
-            <div class="parallax"><img src="img/train.jpg" alt="train"></div>
-         </div>
-        
-        <div class="section no-pad-bot">
-            <div class="container">
-                <h1 class="header teal-text text-lighten-2">Departure Board</h1>
-                <div class="row center">
-                    <div class="container deptBoard">
-                        <div class="row">
-                            <table class="bordered" id="myTable">
-                                <thead>
-                                    <tr>
-                                        <th data-field="locName">Origin:</th>
-                                        <th data-field="destName">Destination</th>
-                                        <th data-field="schDepartTime">Time:</th>
-                                        <th data-field="platform">Platform</th>
-                                        <th data-field="estDepartTime">Expt</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="deptTable">
-                                    <tr>
-                                        <td>
-                                            <div id="loc"></div> 
-                                        </td>
-                                        <td> 
-                                            <div id="dest"></div>
-                                        </td>
-                                        <td>
-                                            <div id="sch"></div> 
-                                        </td>
-                                        <td> 
-                                            <div id="plat"></div>
-                                        </td>
-                                        <td>
-                                            <div id="est"></div>
-                                        </td>  
-                                    </tr>       
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+    <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">National Rail API</h1>
+        <div class="row center">
+            <form class="form-wrapper cf">
+                <input type="text" name="searchQuery" id="searchQuery" placeholder="Search here..." required>
+                    <button id="submitSearch" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="img/train.jpg" alt="train"></div>
+    </div>
+
+<div class="section no-pad-bot">
+    <div class="container">
+        <h1 class="header teal-text text-lighten-2">Departure Board</h1>
+        <div class="row center">
+            <div class="container deptBoard">
+                <div class="row">
+                    <table class="bordered" id="myTable">
+                        <thead>
+                            <tr>
+                                <th data-field="locName">Origin:</th>
+                                <th data-field="destName">Destination</th>
+                                <th data-field="schDepartTime">Time:</th>
+                                <th data-field="platform">Platform</th>
+                                <th data-field="estDepartTime">Expt</th>
+                            </tr>
+                        </thead>
+                        <tbody id="deptTable">
+                            <tr>
+                                <td>
+                                    <div id="loc"></div> 
+                                </td>
+                                <td> 
+                                    <div id="dest"></div>
+                                </td>
+                                <td>
+                                    <div id="sch"></div> 
+                                </td>
+                                <td> 
+                                    <div id="plat"></div>
+                                </td>
+                                <td>
+                                    <div id="est"></div>
+                                </td>  
+                            </tr>       
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/departureBoard.js"></script>
-    </body>
-</html>
+    </div>
+</div>
