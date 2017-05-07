@@ -1,25 +1,25 @@
 # national-rail-api
-####Daniel Maloney
+#### Daniel Maloney
 
-###Scope:
+### Scope:
 The purpose of this project was to be able to  show the live departures from a rail station:
 
-###User Requirements:
+### User Requirements:
 - A user can search for a railway station.
 - The departure board should be styled to look similar to a station departure board.
 - Departures should be updated in near realtime.
 - Bulletins should be viewable on each departure (if provided).
 
-###Installing the API.
+### Installing the API.
 </br>The necessary dependencies for the API to work have been added to the package.json file.
 Download the project and navigate to the project directory, then run the following command.
 
 ```npm install```
 
-###Querying the National Rail API:
+### Querying the National Rail API:
 </br>This project communicates directly with the National Rail's **SOAP** API and returns a JSON response using **REST** principles.
 
-###Original Response using SOAP:
+### Original Response using SOAP:
 ```xml
     <lt2:generatedAt>2016-12-22T16:41:23.6090054+00:00</lt2:generatedAt>
     <lt2:locationName>Manchester Piccadilly</lt2:locationName>
@@ -46,7 +46,7 @@ Download the project and navigate to the project directory, then run the followi
             <lt2:operatorCode>TP</lt2:operatorCode>
             <lt2:serviceID>rgc9JA/SoqJdW4TpEGrifg==</lt2:serviceID>
 ```
-###Response Using this API:
+### Response Using this API:
 ```JSON
   service: 
    [ { std: '16:32',
