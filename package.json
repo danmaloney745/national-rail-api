@@ -21,6 +21,6 @@
     "mongoose": "^4.7.6",
     "password-hash": "^1.2.2",
     "restler": "^3.4.0",
-    "soap": "0.11.4"
+    "soap": "0.44.0"
   }
 }
